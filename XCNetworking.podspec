@@ -13,7 +13,7 @@ XCNetworking 是基于 AFN 二次封装的网络请求工具类，包涵常用�
   s.author           = { 'fanxiaocong' => '1016697223@qq.com' }
   s.source           = { :git => 'https://github.com/fanxiaocong/XCNetworking.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.source_files = 'XCNetworking/Classes/**/*'
   
   s.dependency 'AFNetworking', '~> 3.1.0'
