@@ -1,0 +1,36 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - XCMacros (1.0.2)
+  - XCNetworking (0.0.1):
+    - AFNetworking (~> 3.1.0)
+    - XCMacros (~> 1.0.2)
+
+DEPENDENCIES:
+  - XCNetworking (from `../`)
+
+EXTERNAL SOURCES:
+  XCNetworking:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  XCMacros: abf7c03e5128fea2e800887a7b25c82336c3940b
+  XCNetworking: 5f4105193a28e5c948fc3cb18ce4812b6e2a4d35
+
+PODFILE CHECKSUM: 464ebeaecedcc53c9ef1f782b5f5004524f24990
+
+COCOAPODS: 1.4.0

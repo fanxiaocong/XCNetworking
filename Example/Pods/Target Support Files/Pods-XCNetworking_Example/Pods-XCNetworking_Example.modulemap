@@ -1,0 +1,6 @@
+framework module Pods_XCNetworking_Example {
+  umbrella header "Pods-XCNetworking_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
