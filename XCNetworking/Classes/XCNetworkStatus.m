@@ -11,7 +11,7 @@
  */
 
 #import "XCNetworkStatus.h"
-#import <XCMacros/XCMacros.h>
+
 
 @implementation XCNetworkStatus
 
@@ -48,29 +48,29 @@ static XCNetworkStatus *_instance = nil;
 {
     self.reachDetector = [AFNetworkReachabilityManager sharedManager];
     /// 监听状态的改变
-    @weakify(self);
+    __weak typeof(self)weakSelf = self;
     [self.reachDetector setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        @strongify(self);
+        
         switch (status)
         {
             case AFNetworkReachabilityStatusNotReachable:
             {
-                self.haveNetwork = NO;
+                weakSelf.haveNetwork = NO;
                 break;
             }
             case AFNetworkReachabilityStatusReachableViaWiFi:
             {
-                self.haveNetwork = YES;
+                weakSelf.haveNetwork = YES;
                 break;
             }
             case AFNetworkReachabilityStatusReachableViaWWAN:
             {
-                self.haveNetwork = YES;
+                weakSelf.haveNetwork = YES;
                 break;
             }
             case AFNetworkReachabilityStatusUnknown:
             {
-                self.haveNetwork = NO;
+                weakSelf.haveNetwork = NO;
                 break;
             }
         }
