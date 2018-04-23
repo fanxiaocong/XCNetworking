@@ -15,7 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - XCMacros (1.0.2)
-  - XCNetworking (0.0.1):
+  - XCNetworking (0.0.2):
     - AFNetworking (~> 3.1.0)
     - XCMacros (~> 1.0.2)
 
@@ -29,7 +29,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   XCMacros: abf7c03e5128fea2e800887a7b25c82336c3940b
-  XCNetworking: 426dfe61185ecf12e38bc64c176bd06a3aff5f98
+  XCNetworking: 424f82f02d656951c7fa6d798dd811f1752ff366
 
 PODFILE CHECKSUM: b2bd6acf78eba43ae3a82930c7f1e8ef51828c67
 

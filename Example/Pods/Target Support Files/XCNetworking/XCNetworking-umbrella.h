@@ -11,6 +11,7 @@
 #endif
 
 #import "XCNetworking.h"
+#import "XCNetworkStatus.h"
 
 FOUNDATION_EXPORT double XCNetworkingVersionNumber;
 FOUNDATION_EXPORT const unsigned char XCNetworkingVersionString[];
