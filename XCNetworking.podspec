@@ -15,6 +15,7 @@ XCNetworking 是基于 AFN 二次封装的网络请求工具类，包涵常用�
 
   s.ios.deployment_target = '9.0'
   s.source_files = 'XCNetworking/Classes/**/*'
+  s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
   
   s.dependency 'AFNetworking', '~> 3.1.0'
   s.dependency 'XCMacros', '~> 1.0.2'
