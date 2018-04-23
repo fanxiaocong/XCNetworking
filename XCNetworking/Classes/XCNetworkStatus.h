@@ -12,7 +12,6 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
-#import <XCMacros/XCMacros.h>
 
 
 @interface XCNetworkStatus : NSObject

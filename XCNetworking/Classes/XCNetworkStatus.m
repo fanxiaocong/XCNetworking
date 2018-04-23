@@ -11,6 +11,7 @@
  */
 
 #import "XCNetworkStatus.h"
+#import <XCMacros/XCMacros.h>
 
 @implementation XCNetworkStatus
 
