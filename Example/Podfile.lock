@@ -15,22 +15,27 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - XCMacros (1.0.2)
-  - XCNetworking (0.0.2):
+  - XCNetworking (0.0.3):
     - AFNetworking (~> 3.1.0)
     - XCMacros (~> 1.0.2)
 
 DEPENDENCIES:
   - XCNetworking (from `../`)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - XCMacros
+
 EXTERNAL SOURCES:
   XCNetworking:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   XCMacros: abf7c03e5128fea2e800887a7b25c82336c3940b
-  XCNetworking: 767c30b8f457ca78c9bdc540f50285c752e77080
+  XCNetworking: 350ebdbe6a9a557e527af733cbd3cc0921ab97ab
 
 PODFILE CHECKSUM: b2bd6acf78eba43ae3a82930c7f1e8ef51828c67
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XCNetworking'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = '基于 AFN 二次封装的网络请求工具类，包涵常用的 POST，GET，图片上传，下载请求'
 
   s.description      = <<-DESC
