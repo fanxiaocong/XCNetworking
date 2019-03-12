@@ -8,9 +8,6 @@
 
 #import "XCAppDelegate.h"
 
-#import <XCNetworking/XCNetworking.h>
-#import <XCNetworking/XCNetworkStatus.h>
-
 
 @implementation XCAppDelegate
 
