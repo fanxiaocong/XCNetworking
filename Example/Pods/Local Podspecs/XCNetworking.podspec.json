@@ -1,8 +1,8 @@
 {
   "name": "XCNetworking",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "summary": "基于 AFN 二次封装的网络请求工具类，包涵常用的 POST，GET，图片上传，下载请求",
-  "description": "XCNetworking 是基于 AFN 二次封装的网络请求工具类，包涵常用的 POST，GET，图片上传，下载请求",
+  "description": "XCNetworking 是基于 AFN 二次封装的网络请求工具类，包涵常用的 POST，GET，图片上传，文件上传，下载请求",
   "homepage": "https://github.com/fanxiaocong/XCNetworking",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/fanxiaocong/XCNetworking.git",
-    "tag": "0.0.3"
+    "tag": "0.0.5"
   },
   "platforms": {
     "ios": "9.0"
@@ -27,7 +27,7 @@
       "~> 3.1.0"
     ],
     "XCMacros": [
-      "~> 1.0.2"
+
     ]
   }
 }

@@ -14,10 +14,10 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - XCMacros (1.0.2)
-  - XCNetworking (0.0.3):
+  - XCMacros (1.0.5)
+  - XCNetworking (0.0.5):
     - AFNetworking (~> 3.1.0)
-    - XCMacros (~> 1.0.2)
+    - XCMacros
 
 DEPENDENCIES:
   - XCNetworking (from `../`)
@@ -33,9 +33,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  XCMacros: abf7c03e5128fea2e800887a7b25c82336c3940b
-  XCNetworking: 350ebdbe6a9a557e527af733cbd3cc0921ab97ab
+  XCMacros: 65ea17822e4de6e1e12cacf05d57b619ef196c2f
+  XCNetworking: 85876c4ee5b9a9a7f8b7e0f29d6a55466351759f
 
 PODFILE CHECKSUM: b2bd6acf78eba43ae3a82930c7f1e8ef51828c67
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.9.1

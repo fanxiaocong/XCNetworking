@@ -318,7 +318,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-XCNetworking_Example/Pods-XCNetworking_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-XCNetworking_Example/Pods-XCNetworking_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/XCNetworking/XCNetworking.framework",
 			);
@@ -329,7 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XCNetworking_Example/Pods-XCNetworking_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XCNetworking_Example/Pods-XCNetworking_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBB5418099A5B0BA5A4C1411 /* [CP] Check Pods Manifest.lock */ = {

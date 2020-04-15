@@ -73,15 +73,19 @@ fprintf(stderr, "-------------------\n");   \
 /* 🐖 ***************************** 🐖 设备型号 🐖 *****************************  🐖 */
 
 /** 判断是否是iPhone4、iPhone5、iPhone6、iPhone6p 竖屏模式 */
-#define IS_IPHONE4              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_IPHONE_4              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define IS_IPHONE5              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_IPHONE_5              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define IS_IPHONE6              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_IPHONE_6              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define IS_IPHONE6P              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_IPHONE_6P             ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define IS_IPHONEX              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_IPHONE_X              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define IS_IPHONE_XR             ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define IS_IPHONE_XS_MAX         ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
 
 /// 判断是否是 iPhone
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
@@ -108,6 +112,8 @@ fprintf(stderr, "-------------------\n");   \
 #define iOS9_OR_LATER   (IS_EQUAL_OR_LATER_IOS(9.0))
 #define iOS10_OR_LATER  (IS_EQUAL_OR_LATER_IOS(10.0))
 #define iOS11_OR_LATER  (IS_EQUAL_OR_LATER_IOS(11.0))
+#define iOS12_OR_LATER  (IS_EQUAL_OR_LATER_IOS(12.0))
+#define iOS13_OR_LATER  (IS_EQUAL_OR_LATER_IOS(13.0))
 /* 🐖 ***************************** 🐖 系统版本 🐖 *****************************  🐖 */
 
 
@@ -145,14 +151,17 @@ fprintf(stderr, "-------------------\n");   \
 
 #pragma mark - 👀 尺寸 👀 💤
 /* 🐖 ***************************** 🐖 尺寸 🐖 *****************************  🐖 */
+/// 标记是否是 iphoneX 系列的手机
+#define IS_IPHONE_X_    (IS_IPHONE_X || IS_IPHONE_XR || IS_IPHONE_XS_MAX)
+
 /// 状态栏高度
-#define STARTUS_BAR_HEIGHT       (IS_IPHONEX ? 44.f : 20.f)
+#define STARTUS_BAR_HEIGHT       (IS_IPHONE_X_ ? 44.f : 20.f)
 
 /// navBar方式
 #define NAVIGATION_BAR_HEIGHT    44
 
 /// tabBar高度
-#define TAB_BAR_HEIGHT           (IS_IPHONEX ? (49.f+34.f) : 49.f)
+#define TAB_BAR_HEIGHT           (IS_IPHONE_X_ ? (49.f+34.f) : 49.f)
 
 /// 状态栏 和 navBar 的高度
 #define STATUS_AND_NAVIGATION_BAR_HEIGHT    (STARTUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)
@@ -176,6 +185,35 @@ static inline CGFloat FetchCurrentHeightFromIphone6Height(CGFloat height)
 
 /* 🐖 ***************************** 🐖 尺寸 🐖 *****************************  🐖 */
 
+
+
+#pragma mark - 👀 系统方法 👀 💤
+/* 🐖 ***************************** 🐖 系统方法 🐖 *****************************  🐖 */
+
+/// 系统字体大小
+#define FONT_SIZE(size)         [UIFont systemFontOfSize:(size)]
+
+/// r、g、b 颜色
+#define RGB_COLOR(r,g,b)        [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]
+/// r、g、b、a 颜色
+#define RGBA_COLOR(r,g,b,a)     [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:(a)]
+
+/// 文件路径（文件名称, 类型）
+#define FILE_PATH(name,type)    [[NSBundle mainBundle] pathForResource:name ofType:type]
+
+/// temp路径
+#define TEMP_PATH               NSTemporaryDirectory()
+/// document路径
+#define DOCUMENT_PATH           [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+/// cache路径
+#define CACHE_PATH              [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+/// 图片加载
+#define IMAGE_NAME(name)        [UIImage imageNamed:name]
+/// 图片加载（图片全名）
+#define IMAGE_FILE_NAME(name)   [UIImage imageWithContentsOfFile:FILE_PATH(name,nil)]
+
+/* 🐖 ***************************** 🐖 系统方法 🐖 *****************************  🐖 */
 
 
 
@@ -323,37 +361,31 @@ return _instace; \
 
 #pragma mark - 👀 Dispatch 函数 👀 💤
 /* 🐖 ***************************** 🐖 Dispatch 函数 🐖 *****************************  🐖 */
-/// 异步纯种操作
-static inline void DispatchAscyncOnGloabalQueue(void(^block)())
+/// 异步线程操作
+static inline void DispatchAscyncOnGloabalQueue(void(^block)(void))
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
-        if (block)
-        {
+        if (block) {
             block();
         }
     });
 }
 
-/// 回归主纯种操作
-static inline void DispatchAscyncOnMainQueue(void(^block)())
+/// 回归主线程操作
+static inline void DispatchAscyncOnMainQueue(void(^block)(void))
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        
-        if (block)
-        {
+        if (block) {
             block();
         }
     });
 }
 
 /// 延时操作
-static inline void DispatchAfter(int64_t time, void(^block)())
+static inline void DispatchAfter(int64_t time, void(^block)(void))
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        if (block)
-        {
+        if (block) {
             block();
         }
     });
