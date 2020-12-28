@@ -68,7 +68,7 @@
     [self _print:[NSString stringWithFormat:@"请求参数：%@", parameters]];
         
     @weakify(self);
-    [self.manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:url parameters:parameters headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         @strongify(self);
         [self _print:[NSString stringWithFormat:@"responseObject：%@", responseObject]];
         if (success) {  /// 成功
@@ -99,7 +99,7 @@
     [self _print:[NSString stringWithFormat:@"请求参数：%@", parameters]];
     
     @weakify(self);
-    [self.manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager POST:url parameters:parameters headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         @strongify(self);
         [self _print:[NSString stringWithFormat:@"responseObject：%@", responseObject]];
         if (success) {  /// 成功
@@ -112,7 +112,7 @@
             failure(task, error);
         }
     }];
-    
+
     [self _print:@"请求结束：******************** POST ********************"];
 }
 
@@ -165,7 +165,7 @@
     
     /// 开始上传
     @weakify(self);
-    [self.manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [self.manager POST:url parameters:parameters headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         // 表单提交
         [images enumerateObjectsUsingBlock:^(UIImage * _Nonnull image, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -217,7 +217,7 @@
     
     /// 开始上传
     @weakify(self);
-    [self.manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [self.manager POST:url parameters:parameters headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         // 表单提交
         [formData appendPartWithFileData:data name:directoryName fileName:fileName mimeType:@"audio/mp3"];

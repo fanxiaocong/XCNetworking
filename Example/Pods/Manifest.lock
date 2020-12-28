@@ -1,29 +1,29 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - XCMacros (1.0.5)
-  - XCNetworking (0.0.5):
-    - AFNetworking (~> 3.1.0)
+  - XCNetworking (0.0.6):
+    - AFNetworking (~> 4.0.0)
     - XCMacros
 
 DEPENDENCIES:
   - XCNetworking (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - XCMacros
 
@@ -32,10 +32,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   XCMacros: 65ea17822e4de6e1e12cacf05d57b619ef196c2f
-  XCNetworking: 85876c4ee5b9a9a7f8b7e0f29d6a55466351759f
+  XCNetworking: 145956f79b3b4d5aab0e90c74b73b052be1e115f
 
 PODFILE CHECKSUM: b2bd6acf78eba43ae3a82930c7f1e8ef51828c67
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.6.0
